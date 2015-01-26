@@ -1,0 +1,6 @@
+# Agent User Response File
+CONFIG_DIR= /etc/apache2
+AM_SERVER_URL= http://openam.example.com:8080/openam
+AGENT_URL= http://www.example.com:80
+AGENT_PROFILE_NAME= WebAgent
+AGENT_PASSWORD_FILE= /tmp/password.txt
