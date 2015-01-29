@@ -1,7 +1,6 @@
 FROM mminderbinder/apache2:0.9.15
 MAINTAINER Milo Minderbinder <minderbinder.enterprises@gmail.com>
 
-ENV HOME /root
 
 # Disable default Apache site
 RUN a2dissite 000-default
