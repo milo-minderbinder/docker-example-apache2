@@ -1,4 +1,4 @@
-FROM mminderbinder/apache2:0.9.15
+FROM mminderbinder/apache2:oracle-java7
 MAINTAINER Milo Minderbinder <minderbinder.enterprises@gmail.com>
 
 
