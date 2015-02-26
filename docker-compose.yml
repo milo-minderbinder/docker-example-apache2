@@ -1,0 +1,20 @@
+openam:
+    image: mminderbinder/openam:configured
+    ports:
+        - "127.0.0.1:8080:8080"
+        - "127.0.0.1:8443:8443"
+    volumes:
+        - ./keystore.jks:/usr/share/openam/keystore.jks:ro
+    environment:
+        - KEYSTORE_FILE=/usr/share/openam/keystore.jks
+        - KEYSTORE_PASS=openam
+        - KEYSTORE_KEYALIAS=openam.example.com
+    hostname: openam.example.com
+apache:
+    #build: .
+    image: mminderbinder/example-apache2
+    ports:
+        - "127.0.0.1:80:80"
+    links:
+        - openam:openam.example.com
+    hostname: www.example.com
